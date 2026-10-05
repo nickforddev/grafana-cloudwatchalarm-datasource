@@ -107,6 +107,8 @@ func parseAuthType(authType string) awsds.AuthType {
 		return awsds.AuthTypeDefault
 	case "ec2_iam_role":
 		return awsds.AuthTypeEC2IAMRole
+	case "grafana_assume_role":
+		return awsds.AuthTypeGrafanaAssumeRole
 	case "arn":
 		plog.Warn("Authentication type \"arn\" is deprecated, falling back to default")
 		return awsds.AuthTypeDefault
